@@ -1,0 +1,243 @@
+/* =====================================
+   GLOBAL TYPOGRAPHY SYSTEM
+   Controls font sizes across all pages
+===================================== */
+
+:root {
+	/* Body */
+	--font-size-body: 14px;
+	--font-size-small: 12px;
+	--font-size-tiny: 10px;
+
+	/* Headings */
+	--font-size-h1: clamp(36px, 4vw, 54px);
+	--font-size-h2: clamp(26px, 3vw, 34px);
+	--font-size-h3: 20px;
+	--font-size-h4: 16px;
+
+	/* Line heights */
+	--line-body: 1.7;
+	--line-heading: 1.15;
+}
+
+/* =====================================
+   GLOBAL BASE
+===================================== */
+
+body {
+	font-size: var(--font-size-body);
+	line-height: var(--line-body);
+}
+
+main p,
+main li,
+.experience-page p,
+.experience-page li,
+.visit-details p,
+.visit-details li {
+	font-size: var(--font-size-body);
+	line-height: var(--line-body);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	line-height: var(--line-heading);
+}
+
+/* =====================================
+   HOME PAGE
+===================================== */
+
+/* Main section headings */
+
+.projects-header h2,
+.skills-header h2,
+.experience-header h2,
+.contact-header h2 {
+	font-size: var(--font-size-h1);
+	line-height: 1;
+}
+
+.about-title h2 {
+	font-size: clamp(42px, 5vw, 60px);
+	line-height: 1;
+}
+
+/* Subheadings */
+
+.about-description h3,
+.project-info h3,
+.skill-card h3,
+.experience-card h3,
+.contact-card h3 {
+	font-size: var(--font-size-h3);
+}
+
+/* Body text */
+
+.about-description p,
+.projects-intro,
+.project-info p,
+.skills-header p,
+.experience-header p,
+.experience-card p,
+.contact-header p,
+.contact-card p {
+	font-size: var(--font-size-body);
+	line-height: var(--line-body);
+}
+
+/* Details */
+
+.section-number,
+.detail-label,
+.experience-category,
+.contact-label {
+	font-size: var(--font-size-tiny);
+}
+
+.detail-value {
+	font-size: 13px;
+}
+
+/* =====================================
+   EXPERIENCE / VISITS / TRAINING
+===================================== */
+
+/* Page title */
+
+.experience-page-header h1 {
+	font-size: var(--font-size-h1);
+	line-height: 1.05;
+}
+
+/* Entry headings */
+
+.entry-content h2,
+.visit-card-content h3 {
+	font-size: var(--font-size-h2);
+	line-height: var(--line-heading);
+}
+
+/* Supporting text */
+
+.experience-page-header p,
+.entry-content p,
+.visit-card-content p,
+.entry-meta,
+.entry-date,
+.entry-category {
+	font-size: var(--font-size-body);
+	line-height: var(--line-body);
+}
+
+/* Tags and labels */
+
+.entry-tags,
+.visit-card-tags,
+.experience-page-nav,
+.experience-page-footer {
+	font-size: var(--font-size-small);
+}
+
+/* =====================================
+   VISIT DETAILS
+===================================== */
+
+/* Hero */
+
+.visit-hero h1 {
+	font-size: var(--font-size-h1);
+	line-height: 1.05;
+}
+
+/* Section headings */
+
+.visit-section-content h2 {
+	font-size: var(--font-size-h2);
+}
+
+.technical-topic h3 {
+	font-size: var(--font-size-h3);
+}
+
+/* All text inside visit details */
+
+.visit-details p,
+.visit-details li {
+	font-size: var(--font-size-body);
+	line-height: var(--line-body);
+}
+
+/* Small information labels */
+
+.visit-information,
+.visit-details .detail-label,
+.visit-details .technical-label {
+	font-size: var(--font-size-small);
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (min-width: 576px) and (max-width: 991px) {
+	:root {
+		--font-size-body: 13px;
+		--font-size-small: 11px;
+		--font-size-h3: 19px;
+	}
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 575px) {
+	:root {
+		--font-size-body: 13px;
+		--font-size-small: 11px;
+		--font-size-tiny: 9px;
+
+		--font-size-h1: clamp(32px, 9vw, 42px);
+		--font-size-h2: 25px;
+		--font-size-h3: 18px;
+		--font-size-h4: 15px;
+	}
+
+	.about-title h2 {
+		font-size: clamp(40px, 11vw, 54px);
+	}
+
+	.projects-header h2,
+	.skills-header h2,
+	.experience-header h2,
+	.contact-header h2 {
+		font-size: var(--font-size-h1);
+	}
+
+	.experience-page-header h1,
+	.visit-hero h1 {
+		font-size: var(--font-size-h1);
+	}
+
+	.entry-content h2,
+	.visit-card-content h3,
+	.visit-section-content h2 {
+		font-size: var(--font-size-h2);
+	}
+
+	.about-description h3,
+	.project-info h3,
+	.skill-card h3,
+	.experience-card h3,
+	.technical-topic h3 {
+		font-size: var(--font-size-h3);
+	}
+
+	.contact-card h3 {
+		font-size: 17px;
+	}
+}
